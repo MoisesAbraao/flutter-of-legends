@@ -21,26 +21,31 @@ class _ChampionPage extends State<ChampionPage> {
         backgroundColor: Color.fromRGBO(6, 28, 37, 1),
         title: Text(widget.title),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Image.asset(widget.image),
-              Padding(
-                  padding: const EdgeInsets.all(
-                      10),
-                  child: Text(widget.bio,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                  ))
-                ),
-            ],
-        ),
+      body: ListView.builder(
+              itemCount: 1,
+              itemBuilder: (BuildContext context, int index) {
+              return Container(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Image.asset(widget.image),
+                    Padding(
+                        padding: const EdgeInsets.all(
+                            10),
+                        child: Text(widget.bio,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                        ))
+                      ),
+                  ],
+              ),
         // child: Image.asset(widget.image),
         // padding: const EdgeInsets.all(10),
-      ),
+      );
+      })
+      
     );
   }
 }
