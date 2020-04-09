@@ -35,7 +35,7 @@ class _ChampionPage extends State<ChampionPage> {
                             10),
                         child: Text(widget.bio,
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Color.fromRGBO(6, 28, 37, 1),
                           fontSize: 20,
                         ))
                       ),
