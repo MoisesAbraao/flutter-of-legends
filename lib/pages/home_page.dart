@@ -35,7 +35,7 @@ class _MyHomePageState extends State<HomePage> {
           ? Text(widget.title) 
           : TextField(
               onChanged: (value){
-                _champions = champions.where((i) => i['name'].toLowerCase().indexOf(value) >= 0).toList();
+                _champions = champions.where((i) => i['name'].toLowerCase().indexOf(value.toLowerCase()) >= 0).toList();
                   setState(() {});
               },
             style: TextStyle(color: Colors.white, fontSize: 20),
